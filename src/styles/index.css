@@ -1,3 +1,33 @@
 /* 
     General Styles
 */
+
+body{
+    background-color: black;
+    
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  li {
+    padding: 5px;
+    background-color: #000000;
+    margin: 5px 0;
+    border-radius: 3px;
+  }
+button{
+    cursor: pointer;
+}
+
+.accordion{
+    --bs-accordion-bg: #504f4e;
+    --bs-accordion-active-bg: #daa520;
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accorion-bg: #524a4e;
+    --bs-accordion-active-color: #000000;
+}
+
