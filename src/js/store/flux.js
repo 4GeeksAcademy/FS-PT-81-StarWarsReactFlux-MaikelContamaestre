@@ -1,7 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			URL: "https://www.swapi.tech/api/",
+			URL: "https://www.swapi.tech/api",
 			people:[],
 			persona:{},
 			planets: [],
@@ -9,7 +9,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			species:[],
 			specie:{},
 			favorito:[],
-			datos: []
+			datosCombi: []
 		},
 		actions: {
 		
@@ -84,6 +84,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 							setStore({favorito: [...store.favorito, fav]})
 
 						}
+					},
+					combinadoData: () =>{
+						const{people,planets,species}= getStore();
+						const datosCombi = [
+							...people.map(elem => ({ ...elem, category: "personas" })),
+							...planets.map(elem => ({ ...elem, category: "planeta" })),
+							...species.map(elem => ({ ...elem, category: "especies" }))
+						];
+						setStore({datosCombi: datosCombi})
+						console.log('datos',datosCombi);
+						
 					}
 
 		}

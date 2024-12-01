@@ -11,6 +11,7 @@ ul {
     list-style-type: none;
     padding: 0;
     margin-top: 10px;
+    
   }
   
   li {
@@ -31,3 +32,7 @@ button{
     --bs-accordion-active-color: #000000;
 }
 
+.modal{
+    --bs-modal-bg: black;
+    --bs-modal-border-color: gold;
+}
